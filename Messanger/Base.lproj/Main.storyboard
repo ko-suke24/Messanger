@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Messanger" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login View Controller" id="BYZ-38-t0r" customClass="ViewController" customModule="Messanger" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +89,9 @@
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="forgotPasswordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oFn-f3-A8S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFc-HA-nzf">
                                 <rect key="frame" x="270" y="381" width="128" height="30"/>
@@ -96,12 +99,18 @@
                                 <state key="normal" title="Resend Email">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="resendEmailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8cn-jd-26B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwd-LE-8SF">
                                 <rect key="frame" x="60" y="419" width="294" height="76"/>
                                 <state key="normal" image="loginBtn">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0U5-R2-aTa"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="7cc-s5-d27">
                                 <rect key="frame" x="90" y="832" width="234.5" height="30"/>
@@ -116,6 +125,9 @@
                                         <rect key="frame" x="179.5" y="0.0" width="55" height="30"/>
                                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="16"/>
                                         <state key="normal" title="Sign up"/>
+                                        <connections>
+                                            <action selector="signUpButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AP7-y4-RdF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -133,6 +145,21 @@
                             <constraint firstItem="8Tu-rR-j65" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="oZI-jn-znW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="YfA-DQ-Fu0" id="S6X-w8-QbP"/>
+                        <outlet property="emailLabelOutlet" destination="EjZ-11-Q73" id="2ec-a4-UtX"/>
+                        <outlet property="emailLabelOutletr" destination="YfA-DQ-Fu0" id="rWi-Ta-hD5"/>
+                        <outlet property="emailTextField" destination="YfA-DQ-Fu0" id="lsh-k1-xuL"/>
+                        <outlet property="loginButtonOutlet" destination="dwd-LE-8SF" id="cuq-eN-AGM"/>
+                        <outlet property="passwordLabelOutlet" destination="zrS-h6-XaL" id="0sq-rB-EWs"/>
+                        <outlet property="psaawordTextField" destination="xvJ-mq-aUM" id="TF0-RT-nHN"/>
+                        <outlet property="repeartPasswordTextField" destination="0Kb-Ne-W0E" id="B9f-af-SXN"/>
+                        <outlet property="repeatPasswordLabel" destination="eGt-9B-Mfn" id="wMd-2b-aQl"/>
+                        <outlet property="repeatPasswordLineView" destination="KCV-dd-reh" id="wXj-KR-Dib"/>
+                        <outlet property="resendEmailButtonOutlet" destination="zFc-HA-nzf" id="D95-sg-cf9"/>
+                        <outlet property="signUpButtonOutlet" destination="kBf-sm-Hkf" id="ewE-uu-zYj"/>
+                        <outlet property="signUpLabel" destination="XWR-hY-RFk" id="pMz-LZ-gOD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
